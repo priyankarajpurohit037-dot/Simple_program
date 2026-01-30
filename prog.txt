@@ -1,0 +1,73 @@
+
+class AreaOfSquare {
+    public static void main(String[] args) {
+        int side = 5;
+        int area = side * side;
+        System.out.println("Area of square = " + area);
+    }
+}
+
+
+class SimpleInterest {
+    public static void main(String[] args) {
+        int p = 1000;
+        int t = 2;
+        int r = 5;
+
+        int si = (p * t * r) / 100;
+        System.out.println("Simple Interest = " + si);
+    }
+}
+
+
+class PrimeNumber {
+    public static void main(String[] args) {
+        int n = 7;
+        boolean prime = true;
+
+        for (int i = 2; i <= n / 2; i++) {
+            if (n % i == 0) {
+                prime = false;
+                break;
+            }
+        }
+
+        if (prime && n > 1)
+            System.out.println("Prime number");
+        else
+            System.out.println("Not a prime number");
+    }
+}
+
+
+class AlternatePrimes {
+    public static void main(String[] args) {
+        int count = 0;
+
+        for (int n = 2; n <= 50; n++) {
+            boolean prime = true;
+
+            for (int i = 2; i <= n / 2; i++) {
+                if (n % i == 0) {
+                    prime = false;
+                    break;
+                }
+            }
+
+            if (prime) {
+                count++;
+                if (count % 2 != 0)
+                    System.out.print(n + " ");
+            }
+        }
+    }
+}
+
+
+class StringLength {
+    public static void main(String[] args) {
+        String str = "Hello";
+        System.out.println("Length = " + str.length());
+    }
+}
+
